@@ -1,0 +1,131 @@
+openapi: '3.0.2'
+info:
+  title: Record Locator
+  version: '1.0'
+servers:
+  - url: https://localhost:8290/rls
+paths:
+  /:
+    get:
+      summary: Retrieve locations
+      parameters:
+        - name: patientid
+          in: query
+          description: NHI Number
+          required: true
+          schema:
+            type: string
+        - name: datatype
+          in: query
+          description: Datatype key
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Insert or update locations
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RLS_POST_API_Schema'
+      responses:
+        '200':
+          description: OK
+  /system:
+    get:
+      summary: Retriev all systems
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Insert system
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RLS_SYSTEM_POST_API_Schema'
+      responses:
+        '200':
+          description: OK
+  /datatype:
+    get:
+      summary: Retriev all datatypes
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Insert datatype
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RLS_DataType_POST_API_Schema'
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    RLS_DataType_POST_API_Schema:
+      type: object
+      required:
+      - description
+      - rank
+      properties:
+        description:
+          type: string
+          minLength: 1
+        rank:
+          type: integer
+    
+
+    RLS_POST_API_Schema:
+      type: object
+      required:
+      - systemid
+      - datatype
+      - patientid
+      properties:
+        systemid:
+          type: integer
+        datatype:
+          type: integer
+        patientid:
+          type: string
+          minLength: 1
+
+    RLS_SYSTEM_POST_API_Schema:
+      type: object
+      required:
+      - source_sys
+      - sys_type
+      - loc_type
+      - location
+      properties:
+        source_sys:
+          type: string
+          minLength: 1
+        sys_type:
+          type: string
+          minLength: 1
+        loc_type:
+          type: string
+          minLength: 1
+        third_party_id:
+          type: string
+          minLength: 1
+        location:
+          type: string
+          minLength: 1
+
+
+
+
+
+            
+              

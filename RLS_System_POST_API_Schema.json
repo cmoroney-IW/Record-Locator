@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+    "properties": {
+        "source_sys": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sys_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "loc_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "third_party_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+     "required": [
+        "source_sys",
+        "sys_type",
+        "loc_type",
+        "location"
+  ]
+}
