@@ -7,17 +7,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.NonNull;
+import lombok.*;
 
+@RequiredArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
-@Table(name = "patient")
-public class Patient {
+@Table(name = "datatype")
+public class Datatype {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NonNull
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
+    @Column(name = "description", nullable = false)
+    private String description;
+
+    @Column(name = "rank", nullable = false)
+    private int rank;
 }
