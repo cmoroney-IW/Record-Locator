@@ -6,9 +6,11 @@ import com.recordlocator.entity.LocatorModel;
 
 public interface LocatorService {
 
-    public LocatorModel getRecord(Long rlsId);
+    LocatorModel getRecord(Long rlsId);
 
     List<LocatorModel> getAllRecords();
 
     LocatorModel createRecord(LocatorModel locator);
+
+    void deleteRecord(Long rlsId);
 }

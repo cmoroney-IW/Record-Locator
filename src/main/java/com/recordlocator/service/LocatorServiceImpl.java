@@ -39,4 +39,9 @@ public class LocatorServiceImpl implements LocatorService {
         else
             throw new NotFoundException(rlsId);
     }
+
+    @Override
+    public void deleteRecord(Long rlsId) {
+        locatorRepository.deleteById(rlsId);
+    }
 }

@@ -6,10 +6,11 @@ import com.recordlocator.entity.SystemModel;
 
 public interface SystemService {
 
-    public SystemModel getSystem(Long systemId);
+    SystemModel getSystem(Long systemId);
 
     List<SystemModel> getAllSystems();
 
     SystemModel createSystem(SystemModel system);
 
+    void deleteSystem(Long systemId);
 }

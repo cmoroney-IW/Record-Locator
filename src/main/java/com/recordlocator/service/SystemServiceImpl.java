@@ -34,4 +34,9 @@ public class SystemServiceImpl implements SystemService {
     public SystemModel createSystem(SystemModel system) {
         return systemRepository.save(system);
     }
+
+    @Override
+    public void deleteSystem(Long systemId) {
+        systemRepository.deleteById(systemId);
+    }
 }

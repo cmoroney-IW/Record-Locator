@@ -35,4 +35,9 @@ public class DataTypeServiceImpl implements DataTypeService {
         return dataTypeRepository.save(dataType);
     }
 
+    @Override
+    public void deleteDataType(Long dataTypeId) {
+        dataTypeRepository.deleteById(dataTypeId);
+    }
+
 }

@@ -6,9 +6,11 @@ import com.recordlocator.entity.DataTypeModel;
 
 public interface DataTypeService {
 
-    public DataTypeModel getDataType(Long dataTypeId);
+    DataTypeModel getDataType(Long dataTypeId);
 
     List<DataTypeModel> getAllDataTypes();
 
     DataTypeModel createDataType(DataTypeModel dataType);
+
+    void deleteDataType(Long dataTypeId);
 }
