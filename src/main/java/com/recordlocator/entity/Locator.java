@@ -1,5 +1,7 @@
 package com.recordlocator.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,15 +21,20 @@ public class Locator {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "rls_id")
+    private long rlsId;
 
-    @Column(name = "systemid", nullable = false)
-    private int systemid;
+    @Column(name = "system_id", nullable = false)
+    private int systemId;
 
-    @Column(name = "datatype", nullable = false)
-    private int datatype;
+    @Column(name = "data_type", nullable = false)
+    private int dataType;
 
     @NonNull
-    @Column(name = "patientid", nullable = false)
-    private String patientid;
+    @Column(name = "patient_id", nullable = false)
+    private String patientId;
+
+    @NonNull
+    @Column(name = "last_updated")
+    private LocalDateTime lastUpdated;
 }

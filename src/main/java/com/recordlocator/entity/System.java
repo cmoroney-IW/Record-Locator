@@ -19,22 +19,23 @@ public class System {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "system_id")
+    private long systemId;
 
     @Column(name = "third_party_id")
-    private String third_party_id;
+    private String thirdPartyId;
 
     @NonNull
     @Column(name = "source_sys", nullable = false)
-    private String source_sys;
+    private String sourceSys;
 
     @NonNull
     @Column(name = "sys_type", nullable = false)
-    private String sys_type;
+    private String sysType;
 
     @NonNull
     @Column(name = "loc_type", nullable = false)
-    private String loc_type;
+    private String locType;
 
     @NonNull
     @Column(name = "location", nullable = false)

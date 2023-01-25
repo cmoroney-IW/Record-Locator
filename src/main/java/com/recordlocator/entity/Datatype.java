@@ -19,11 +19,12 @@ public class Datatype {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "type_id")
+    private long typeId;
 
     @NonNull
-    @Column(name = "description", nullable = false)
-    private String description;
+    @Column(name = "type_desc", nullable = false)
+    private String typeDesc;
 
     @Column(name = "rank", nullable = false)
     private int rank;
