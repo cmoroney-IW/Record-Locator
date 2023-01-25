@@ -14,8 +14,8 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "datatype")
-public class Datatype {
+@Table(name = "dataType")
+public class DataTypeModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

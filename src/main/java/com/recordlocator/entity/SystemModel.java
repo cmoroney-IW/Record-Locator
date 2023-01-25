@@ -15,7 +15,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "system")
-public class System {
+public class SystemModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

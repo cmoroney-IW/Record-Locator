@@ -2,10 +2,13 @@ package com.recordlocator.service;
 
 import java.util.List;
 
-import com.recordlocator.entity.Datatype;
+import com.recordlocator.entity.DataTypeModel;
 
-public interface DatatypeService {
-    List<Datatype> getDatatypes();
+public interface DataTypeService {
 
-    Datatype getDatatypeById(Long id);
+    public DataTypeModel getDataType(Long dataTypeId);
+
+    List<DataTypeModel> getAllDataTypes();
+
+    DataTypeModel createDataType(DataTypeModel dataType);
 }

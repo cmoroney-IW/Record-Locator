@@ -17,7 +17,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "locator")
-public class Locator {
+public class LocatorModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
