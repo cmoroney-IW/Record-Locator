@@ -1,10 +1,10 @@
-package com.MedTech;
+package com.medtech;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MedTechApplicationTests {
+class MedtechApplicationTests {
 
 	@Test
 	void contextLoads() {
